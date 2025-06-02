@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turismo</title>
+  <link rel="icon" href="Images/LogoIncas.png">
+  <link rel="stylesheet" href="Styles/Style_Turismo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body style="background-color: aqua;">
+  <header>
+    <div class="logo"><img src="Images/LogoIncas.png" height="50px"></div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav">
+      <a href="Index.html"><i class="fas fa-home"></i> Inicio</a>
+      <a href="Vocabulario.html"><i class="fas fa-tags"></i> Vocabulario</a>
+      <a href="Reflexiones.html"><i class="fas fa-lightbulb"></i> Reflexiones</a>
+      <a href="Galería.html"><i class="fas fa-images"></i> Galería</a>
+      <a href="Turismo.html"><i class="fas fa-plane"></i> Turismo</a>
+      <a href="Clases.html"><i class="fas fa-chalkboard-teacher"></i> Clases</a>
+      <a href="Etiquetas.html"><i class="fas fa-tags"></i> Etiquetas</a>
+      <a href="Conclusión.html"><i class="fas fa-flag-checkered"></i> Conclusión</a>
+      <a href="Listado.html"><i class="fas fa-list"></i> Listado</a>
+    </nav>
+  </header>
+  
+  <section class="galeria-slider">
+    <button id="prev-slider" class="slider-btn nav-btn"><i class="fas fa-chevron-left"></i></button>
+    <img id="slider-img" src="Images/Jardín/j1.png" alt="Galería" />
+    <button id="toggle-slider" class="slider-btn pause-btn">⏸️ Detener</button>
+    <button id="next-slider" class="slider-btn nav-btn"><i class="fas fa-chevron-right"></i></button>
+  </section>
+
+  <script>
+  function toggleMenu() {
+    document.getElementById('nav').classList.toggle('active');
+  }
+
+  // Slider automático con animación de zoom y slide y botones de pausa, adelantar y regresar
+  const imagenes = [
+    "Images/Jardín/j1.png",
+    "Images/Jardín/j2.png",
+    "Images/Jardín/j3.png",
+    "Images/Jardín/j4.png",
+    "Images/Puerta-diablo/p1.jpg",
+    "Images/Puerta-diablo/p2.jpg",
+    "Images/Puerta-diablo/p3.jpg",
+    "Images/Puerta-diablo/p4.jpg",
+    "Images/Puerta-diablo/p5.jpg",
+    "Images/Puerta-diablo/p6.jpg",
+  ];
+  let idx = 0;
+  const sliderImg = document.getElementById('slider-img');
+  const toggleBtn = document.getElementById('toggle-slider');
+  const prevBtn = document.getElementById('prev-slider');
+  const nextBtn = document.getElementById('next-slider');
+  let running = true;
+  let interval = setInterval(changeImg, 3000);
+
+  function showImg(newIdx, anim = true) {
+    sliderImg.classList.remove('anim-in');
+    sliderImg.classList.add('anim-out');
+    setTimeout(() => {
+      idx = (newIdx + imagenes.length) % imagenes.length;
+      sliderImg.src = imagenes[idx];
+      sliderImg.classList.remove('anim-out');
+      if (anim) sliderImg.classList.add('anim-in');
+    }, 500);
+  }
+
+  function changeImg() {
+    showImg(idx + 1);
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    if (running) {
+      clearInterval(interval);
+      toggleBtn.textContent = '▶️ Reanudar';
+    } else {
+      interval = setInterval(changeImg, 3000);
+      toggleBtn.textContent = '⏸️ Detener';
+    }
+    running = !running;
+  });
+
+  prevBtn.addEventListener('click', () => {
+    showImg(idx - 1);
+    if (running) {
+      clearInterval(interval);
+      interval = setInterval(changeImg, 3000);
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    showImg(idx + 1);
+    if (running) {
+      clearInterval(interval);
+      interval = setInterval(changeImg, 3000);
+    }
+  });
+  </script>
+  <footer> © Derechos de autor reservados 2025-2026</footer>
+</body>
+
+</html>

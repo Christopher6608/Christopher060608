@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clases</title>
+  <link rel="stylesheet" href="Styles/Style_Clases.css">
+  <link rel="icon" href="Images/LogoIncas.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body style="background-color: aqua; min-height: 100vh; display: flex; flex-direction: column;">
+  <header>
+    <div class="logo"><img src="Images/LogoIncas.png" height="50px"></div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav">
+      <a href="Index.html"><i class="fas fa-home"></i> Inicio</a>
+      <a href="Vocabulario.html"><i class="fas fa-tags"></i> Vocabulario</a>
+      <a href="Reflexiones.html"><i class="fas fa-lightbulb"></i> Reflexiones</a>
+      <a href="Galería.html"><i class="fas fa-images"></i> Galería</a>
+      <a href="Turismo.html"><i class="fas fa-plane"></i> Turismo</a>
+      <a href="Clases.html"><i class="fas fa-chalkboard-teacher"></i> Clases</a>
+      <a href="Etiquetas.html"><i class="fas fa-tags"></i> Etiquetas</a>
+      <a href="Conclusión.html"><i class="fas fa-flag-checkered"></i> Conclusión</a>
+      <a href="Listado.html"><i class="fas fa-list"></i> Listado</a>
+    </nav>
+  </header>
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('active');
+    }
+  </script>
+  <!-- Carrusel 3D automático -->
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slides">
+        <img src="Images/clase1.png" alt="Clase 1">
+      </div>
+      <div class="slides">
+        <img src="Images/clase2.png" alt="Clase 2">
+      </div>
+      <div class="slides">
+        <img src="Images/clase3.png" alt="Clase 3">
+      </div>
+      <div class="slides">
+        <img src="Images/clase4.png" alt="Clase 4">
+      </div>
+      <div class="slides">
+        <img src="Images/clase5.png" alt="Clase 5">
+      </div>
+      <div class="slides">
+        <img src="Images/clase6.png" alt="Clase 6">
+      </div>
+      <div class="slides">
+        <img src="Images/clase7.png" alt="Clase 7">
+      </div>
+      <div class="slides">
+        <img src="Images/clase8.png" alt="Clase 8">
+      </div>
+      <div class="slides">
+        <img src="Images/clase9.png" alt="Clase 9">
+      </div>
+      <div class="slides">
+        <img src="Images/clase10.png" alt="Clase 10">
+      </div>
+      <div class="slides">
+        <img src="Images/clase11.png" alt="Clase 11">
+      </div>
+      <div class="slides">
+        <img src="Images/clase12.png" alt="Clase 12">
+      </div>
+      <div class="slides">
+        <img src="Images/clase13.png" alt="Clase 13">
+      </div>
+      <div class="slides">
+        <img src="Images/clase14.png" alt="Clase 14">
+      </div>
+      <div class="slides">
+        <img src="Images/clase15.png" alt="Clase 15">
+      </div>
+      <div class="slides">
+        <img src="Images/clase16.png" alt="Clase 16">
+      </div>
+      <div class="slides">
+        <img src="Images/clase17.png" alt="Clase 17">
+      </div>
+      <div class="slides">
+        <img src="Images/clase18.png" alt="Clase 18">
+      </div>
+      <div class="slides">
+        <img src="Images/clase19.png" alt="Clase 19">
+      </div>
+      <div class="slides">
+        <img src="Images/clase20.png" alt="Clase 20">
+      </div>
+      <div class="slides">
+        <img src="Images/clase21.png" alt="Clase 21">
+      </div>
+      <div class="slides">
+        <img src="Images/clase22.png" alt="Clase 22">
+      </div>
+    </div>
+  </div>
+  <!-- Botón para detener/reanudar el carrusel -->
+  <div class="carrusel-btn-container">
+    <button id="toggle-carrusel" class="carrusel-btn">
+      Detener carrusel
+    </button>
+  </div>
+  <footer style="margin-top:auto;"> © Derechos de autor reservados 2025-2026</footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slider = document.querySelector('.slider');
+      const btn = document.getElementById('toggle-carrusel');
+      let detenido = false;
+
+      // Botón detener/reanudar carrusel
+      btn.onclick = function () {
+        detenido = !detenido;
+        slider.style.animationPlayState = detenido ? 'paused' : 'running';
+        btn.textContent = detenido ? 'Reanudar carrusel' : 'Detener carrusel';
+      };
+    });
+  </script>
+</body>
+
+</html>

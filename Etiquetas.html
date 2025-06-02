@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etiquetas</title>
+  <link rel="icon" href="Images/LogoIncas.png">
+  <link rel="stylesheet" href="Styles/Style_Etiquetas.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body style="background-color: aqua;">
+  <header>
+    <div class="logo"><img src="Images/LogoIncas.png" height="50px"></div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav">
+      <a href="Index.html"><i class="fas fa-home"></i> Inicio</a>
+      <a href="Vocabulario.html"><i class="fas fa-tags"></i> Vocabulario</a>
+      <a href="Reflexiones.html"><i class="fas fa-lightbulb"></i> Reflexiones</a>
+      <a href="Galería.html"><i class="fas fa-images"></i> Galería</a>
+      <a href="Turismo.html"><i class="fas fa-plane"></i> Turismo</a>
+      <a href="Clases.html"><i class="fas fa-chalkboard-teacher"></i> Clases</a>
+      <a href="Etiquetas.html"><i class="fas fa-tags"></i> Etiquetas</a>
+      <a href="Conclusión.html"><i class="fas fa-flag-checkered"></i> Conclusión</a>
+      <a href="Listado.html"><i class="fas fa-list"></i> Listado</a>
+    </nav>
+  </header>
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('active');
+    }
+  </script>
+
+  <h1>Guía completa de HTML, CSS y JavaScript</h1>
+
+  <section>
+    <h2>📄 HTML - Etiquetas principales</h2>
+    <ul>
+      <li><code>&lt;h1&gt;...&lt;/h1&gt;</code>: Encabezado principal</li>
+      <li><code>&lt;p&gt;...&lt;/p&gt;</code>: Párrafo</li>
+      <li><code>&lt;a href="#"&gt;Enlace&lt;/a&gt;</code>: Vincular</li>
+      <li><code>&lt;img src="..." alt="..."&gt;</code>: Imagen</li>
+      <li><code>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</code>: Lista no ordenada</li>
+      <li><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code>: Tabla</li>
+      <li><code>&lt;form&gt;&lt;input&gt;&lt;/form&gt;</code>: Formulario</li>
+      <li><code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>: Contenedores</li>
+      <li><code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>: Etiquetas semánticas</li>
+      <!-- Otras etiquetas útiles -->
+      <li><code>&lt;section&gt;...&lt;/section&gt;</code>: Sección temática del documento</li>
+      <li><code>&lt;article&gt;...&lt;/article&gt;</code>: Contenido independiente/autocontenible</li>
+      <li><code>&lt;aside&gt;...&lt;/aside&gt;</code>: Información secundaria o complementaria</li>
+      <li><code>&lt;nav&gt;...&lt;/nav&gt;</code>: Navegación principal</li>
+      <li><code>&lt;figure&gt;...&lt;/figure&gt;</code> y <code>&lt;figcaption&gt;...&lt;/figcaption&gt;</code>: Imagen y su pie de foto</li>
+      <li><code>&lt;mark&gt;...&lt;/mark&gt;</code>: Resalta texto</li>
+      <li><code>&lt;code&gt;...&lt;/code&gt;</code>: Fragmento de código</li>
+      <li><code>&lt;blockquote&gt;...&lt;/blockquote&gt;</code>: Cita en bloque</li>
+      <li><code>&lt;em&gt;...&lt;/em&gt;</code>: Énfasis en el texto</li>
+      <li><code>&lt;strong&gt;...&lt;/strong&gt;</code>: Texto importante</li>
+      <li><code>&lt;sup&gt;...&lt;/sup&gt;</code> y <code>&lt;sub&gt;...&lt;/sub&gt;</code>: Superíndice y subíndice</li>
+      <li><code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>: Elementos de formulario</li>
+      <li><code>&lt;progress&gt;</code>, <code>&lt;meter&gt;</code>: Barras de progreso y medición</li>
+      <li><code>&lt;details&gt;</code> y <code>&lt;summary&gt;</code>: Secciones desplegables</li>
+      <li><code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>: Multimedia</li>
+      <li><code>&lt;link&gt;</code>: Vincula recursos externos (CSS, iconos, etc.)</li>
+      <li><code>&lt;meta&gt;</code>: Metadatos del documento</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎨 CSS - Propiedades y selectores</h2>
+    <pre><code><css>/* Selectores */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+h1 {
+  font-size: 2em;
+  color: #1a73e8;
+}
+button:hover {
+  background-color: #155cc1;
+}
+
+/* Propiedades comunes */
+width, height, margin, padding, background, color,
+font-size, font-family, text-align, display, position,
+border, border-radius, box-shadow</css></code></pre>
+  </section>
+
+  <section>
+    <h2>🧠 JavaScript - Comandos básicos</h2>
+    <pre><code><js>// Variables
+let nombre = "Juan";
+const edad = 30;
+
+// Función
+function saludar() {
+  alert("Hola " + nombre);
+}
+
+// Eventos
+// document.getElementById("btnSaludar").addEventListener("click", saludar);
+
+// Condicional
+if (edad >= 18) {
+  console.log("Es mayor de edad");
+}
+
+// Bucle
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}</js></code></pre>
+    <div id="saludo-area">
+      <input id="inputNombre" type="text" placeholder="Escribe tu nombre..." style="padding:8px 14px; border-radius:8px; border:1.5px solid #4d01ff; font-size:1em;">
+      <button id="btnSaludar" style="display:none; margin-left:8px;">Saludar</button>
+      <div id="saludo" style="margin-top:15px; font-size:1.1em; color:#1a73e8; font-weight:bold; padding-top: 0px;"></div>
+    </div>
+  </section>
+
+  <script>
+    // Mostrar botón solo si hay texto en el input
+    const inputNombre = document.getElementById("inputNombre");
+    const btnSaludar = document.getElementById("btnSaludar");
+    const saludoDiv = document.getElementById("saludo");
+    const saludoArea = document.getElementById("saludo-area");
+
+    inputNombre.addEventListener("input", function() {
+      btnSaludar.style.display = this.value.trim() ? "inline-block" : "none";
+    });
+
+    btnSaludar.addEventListener("click", function() {
+      const nombre = inputNombre.value.trim();
+      if (nombre) {
+        saludoDiv.textContent = `¡Hola ${nombre}! 👋`;
+        inputNombre.style.display = "none";
+        btnSaludar.style.display = "none";
+        setTimeout(() => {
+          saludoDiv.textContent = "";
+          inputNombre.value = "";
+          inputNombre.style.display = "inline-block";
+          inputNombre.focus();
+        }, 3000);
+      }
+    });
+  </script>
+  <!-- Botón flotante para ir al inicio -->
+<a href="#" class="btn-inicio" title="Ir al inicio">
+  <i class="fas fa-arrow-up"></i> Inicio
+</a>
+  <footer> © Derechos de autor reservados 2025-2026</footer>
+</body>
+
+</html>

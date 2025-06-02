@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INICIO</title>
+  <link rel="stylesheet" href="Styles/Style_Index.css">
+  <link rel="icon" href="Images/LogoIncas.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body style="background-color: aqua;">
+  <header>
+    <div class="logo"><img src="Images/LogoIncas.png" height="50px"></div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav">
+      <a href="Index.html"><i class="fas fa-home"></i> Inicio</a>
+      <a href="Vocabulario.html"><i class="fas fa-tags"></i> Vocabulario</a>
+      <a href="Reflexiones.html"><i class="fas fa-lightbulb"></i> Reflexiones</a>
+      <a href="Galería.html"><i class="fas fa-images"></i> Galería</a>
+      <a href="Turismo.html"><i class="fas fa-plane"></i> Turismo</a>
+      <a href="Clases.html"><i class="fas fa-chalkboard-teacher"></i> Clases</a>
+      <a href="Etiquetas.html"><i class="fas fa-tags"></i> Etiquetas</a>
+      <a href="Conclusión.html"><i class="fas fa-flag-checkered"></i> Conclusión</a>
+      <a href="Listado.html"><i class="fas fa-list"></i> Listado</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <div class="thumbnail">
+      <img src="Images/My_photo.jpeg" alt="Miniatura" />
+    </div>
+    <div class="text-content">
+      <h2>DATOS DEL ESTUDIANTE</h2>
+      <div class="dato"><span class="icono">👤</span> <b>Nombre:</b> Christopher Enrique Vargas Quezada
+      </div>
+      <div class="dato"><span class="icono">🎂</span> <b>Edad:</b> 16 años</div>
+      <div class="dato"><span class="icono">📅</span> <b>Fecha de nacimiento:</b> 06/06/2008</div>
+      <div class="dato"><span class="icono">🆔</span> <b>Nie:</b> 19859508</div>
+      <div class="dato"><span class="icono">✉️</span> <b>Correo:</b> 19859508@clases.edu.sv</div>
+      <div class="dato"><span class="icono">🏫</span> <b>Sede:</b> Instituto Nacional Cornelio Azenón Sierra
+      </div>
+    </div>
+    <div class="deirnail">
+      <img src="Images/Yo_confess.png" alt="Miniatura secundaria" />
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('active');
+    }
+  </script>
+  <footer> © Derechos de autor reservados 2025-2026</footer>
+</body>
+
+</html>
